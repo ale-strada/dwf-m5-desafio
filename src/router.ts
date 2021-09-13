@@ -38,7 +38,7 @@ export function initRouter(conteiner:Element){
         }
     }
 
-    if (location.pathname == "/"){
+    if (location.pathname == "/dwf-m5-desafio"){
         goTo("/welcome")
     }else{
       handleRoute(location.pathname);  
