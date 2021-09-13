@@ -214,7 +214,7 @@ function currentGame(lastState) {
 `
 button.addEventListener("click",(e)=>{
     e.preventDefault()
-    params.goTo("/play")
+    params.goTo("/dwf-m5-desafio/play")
 
     
     })

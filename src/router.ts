@@ -5,15 +5,19 @@ import {initPagePlay} from "./pages/play"
 
 const routes = [
     {
-        path: /\/welcome/,
+        path: /\/dwf-m5-desafio\/welcome/,
         component: initPageWelcome,
     },
     {
-        path: /\/instructions/,
+        path: /\/dwf-m5-desafio/,
+        component: initPageWelcome,
+    },
+    {
+        path: /\/dwf-m5-desafio\/instructions/,
         component: initPageInstructions,
     },
     {
-        path: /\/play/,
+        path: /\/dwf-m5-desafio\/play/,
         component: initPagePlay,
     }
 ];
@@ -38,8 +42,8 @@ export function initRouter(conteiner:Element){
         }
     }
 
-    if (location.pathname == "/dwf-m5-desafio"){
-        goTo("/welcome")
+    if (location.host.includes("github.io")){
+        goTo("/dwf-m5-desafio")
     }else{
       handleRoute(location.pathname);  
     }

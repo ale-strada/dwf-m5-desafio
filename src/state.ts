@@ -51,11 +51,17 @@ const state = {
 
     loadHistory(){
         const lastState = this.getState();
-        const historial = localStorage.getItem("save-history")
-        this.setState({
-            ...lastState,
-            history:JSON.parse(historial)
-        })
+        const historial = localStorage.getItem("save-history");
+       
+        if (historial === null){
+            localStorage.setItem("save-history",JSON.stringify({myPlay:0,computerPlay:0}))
+        }else{
+            this.setState({
+                ...lastState,
+                history:JSON.parse(historial)
+            })
+        }
+       
     },
     deleteHistory(){
         const lastState = this.getState();

@@ -27,7 +27,7 @@ export function initPageWelcome(params){
 `
     button.addEventListener("click",(e)=>{
     e.preventDefault()
-    params.goTo("/instructions")    
+    params.goTo("/dwf-m5-desafio/instructions")    
     })
 
     const sectionFooter = document.createElement("section")
